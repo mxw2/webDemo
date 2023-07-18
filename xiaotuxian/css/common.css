@@ -1,0 +1,19 @@
+/* 专门放置header、footer公共样式 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut ul {
+    float: right;
+}
+
+.shortcut li {
+    float: left;
+    height: 52px;
+    line-height: 52px;
+}
+
+.shortcut a {
+    color: #fff;
+}

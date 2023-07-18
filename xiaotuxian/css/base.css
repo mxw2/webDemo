@@ -1,0 +1,59 @@
+/* 初始化css文件 */
+* {
+    margin: 0;
+    padding: 0;
+    /* 内边距和边框不会撑大盒子 */
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    /* 清除图片底部的默认缝隙 */
+    vertical-align: middle;
+}
+
+input, button {
+    /* 清除默认边框 */
+    border: 0;
+    /* 清除轮廓线 */
+    outline: 0;
+}
+
+ /* CSS 具有继承性，他的子类都会继承，a标签除外  */
+body {
+    font: 16px arial, 'Microsoft yahei', 'PingFangSC-Regular', sans-serif;
+    color: #333;
+}
+
+a {
+    color: #333;
+    /* 清除下划线 */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #27ba9b;
+}
+
+.w {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+em, i {
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+
