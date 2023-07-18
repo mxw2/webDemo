@@ -17,3 +17,61 @@
 .shortcut a {
     color: #fff;
 }
+
+.shortcut .line {
+    width: 1px;
+    height: 14px;
+    background-color: #333;
+    margin: 19px 16px 0;
+}
+
+/* 使用.shortcut .phone为了增加权重 */
+.shortcut .phone::before {
+    /* 因为是行内块元素，先转模式 */
+    display: inline-block;
+    /* 设置宽高 */
+    width: 12px;
+    height: 16px;
+    /* 伪元素必须设置该属性！！！ */
+    content: '';
+    /* 使用连写，如果没有图片宽度高度，可以省略，因为他们是最后边的数据，不会影响到内核解析
+    如果手动写了宽度和高度，必须写清楚，他们前面的偏移量 */
+    background: url(../images/sprites.png) no-repeat -159px -69px;
+    /* 手机图片位置有点问题
+    解决：
+    方法1：行内元素，行内块元素垂直对齐属性 */
+    /* vertical-align: middle; */
+    /* 
+    方法2：使用相对位置，采用top微微调整 */
+    position: relative;
+    top: 2px;
+    padding-right: 3px;
+}
+
+.header {
+    height: 130px;
+    background-color: pink;
+}
+
+.nav, .focus, .shopcar {
+    float: right;
+}
+
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    background-color: #ccc;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.logo a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    /* 背景属性连写,如果有背景尺寸, 背景定位的值必写 */
+    background: url(../images/logo.png) 0 0 / 100% 100%;
+     /* 隐藏a里边的文字 */
+    font-size: 0;
+}
