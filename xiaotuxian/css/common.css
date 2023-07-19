@@ -50,10 +50,13 @@
 
 .header {
     height: 130px;
-    background-color: pink;
 }
 
-.nav, .focus, .shopcar {
+.logo, .nav, .search {
+    float: left;
+}
+
+.shopcar {
     float: right;
 }
 
@@ -74,4 +77,144 @@
     background: url(../images/logo.png) 0 0 / 100% 100%;
      /* 隐藏a里边的文字 */
     font-size: 0;
+}
+
+.nav {
+    height: 130px;
+    margin-left: 40px;
+}
+
+.nav li {
+    float: left;
+    height: 130px;
+    line-height: 130px;
+    margin-right: 48px;
+}
+
+.nav li a {
+    padding-bottom: 7px;
+}
+
+.nav li a:hover {
+    border-bottom: 1px solid #27ba9b;
+}
+
+.search {
+    position: relative;
+    width: 172px;
+    height: 30px;
+    margin-top: 50px;
+    /* margin-left: 34px; */
+}
+
+.search input {
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #999;
+    padding-left: 34px;
+}
+
+/* input不能添加伪元素，单标签都不能添加伪元素 */
+.search::before {
+    content: '';
+    /* 伪元素是行内元素，不可以直接设置宽高，绝对定位的元素会脱靶，就可以设置宽高了 */
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/sprites.png") -78px -67px;
+}
+
+.shopcar {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: url("../images/sprites.png") -119px -68px;
+    margin-top: 50px;
+    margin-right: 12px;
+}
+
+.shopcar span {
+    position: relative;
+    /* 文字变化，不要设置宽度 */
+    left: 12px;
+    top: -6px;
+    height: 15px;
+    padding: 0 5px;
+    background-color: #27ba9b;
+    font-size: 13px;
+    margin-top: -12px;
+    border-radius: 7.5px;
+}
+
+/* ************************** footer *************************** */
+
+.footer {
+    background-color: #333;
+    height: 345px;
+}
+
+.footer .w {
+    width: 1320px;
+}
+
+.slogan {
+    /* background-color: #fff; */
+    height: 174px;
+    border-bottom: 1px solid #999;
+}
+
+.slogan li {
+    float: left;
+    width: 33.333%;
+    height: 174px;
+    padding-left: 135px;
+    line-height: 174px;
+    color: #fff;
+}
+
+.slogan h4 {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+.slogan span {
+    display: inline-block;
+    width: 59px;
+    height: 59px;
+    /* 文字竖直方向对齐方式 */
+    vertical-align: middle;
+    background: url("../images/sprites.png") 0 0;
+}
+
+.slogan ul li:nth-child(2) span {
+    background: url("../images/sprites.png") -63px 0;
+}
+
+.slogan ul li:nth-child(3) span {
+    background: url("../images/sprites.png") -128px 0;
+}
+
+.footer-links {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 41px;
+}
+
+.footer-links a {
+    color: #fff;
+}
+
+.footer-links span {
+    margin: 0 4px;
+    color: #fff;
+}
+
+.copyright {
+    /* 文字水平对齐方式 */
+    text-align: center; 
+    margin-top: 25px;
+    color: #fff;
 }
