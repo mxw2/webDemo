@@ -47,16 +47,20 @@
     color:white;
 }
 
-.main {
-    background-color: red;
-    padding: 10px;
+body {
+    background-color: gray;
 }
-/*********************** 订单相关 ***********************/
+
+.main {
+    padding: 10px;
+    background-color: gray;
+}
+/*********************** 订单头部相关 ***********************/
 .order-address {
     display: flex;
     align-items: center;
+    background-color: white;
     padding: 10px 0 10px 10px;
-    background-color: blue;
     border-radius: 5px;
 }
 
@@ -64,7 +68,6 @@
 .main .order-address .address-icon {
     width: 30px;
     height: 30px;
-    color: blue;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
@@ -74,11 +77,32 @@
 
 .order-address .user-info {
     flex: 1;
-    background-color: yellow;
 }
 
 .order-address .more {
     width: 44px;
     height: 44px;
-    background-color: green;
+    text-align: center;
+    line-height: 44px;
+}
+
+.order-address .user-info .top {
+    display: flex;
+    height: 13px;
+    align-items: center;
+}
+
+.order-address .user-info .top .name {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.order-address .user-info .bottom {
+    margin-top: 10px;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
