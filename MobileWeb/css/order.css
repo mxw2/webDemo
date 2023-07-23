@@ -48,12 +48,13 @@
 }
 
 body {
-    background-color: gray;
+    background-color: #eee;
 }
 
 .main {
-    padding: 10px 10px 90px;
-    background-color: gray;
+    /* .payment.height(80px) + 10px(不用写，因为.main>div.margin-bottom=10px) */
+    padding: 10px 10px 80px; 
+    background-color: #eee;
 }
 
 .main>div {
@@ -178,3 +179,35 @@ body {
     padding-top: 20px;
     text-align: center;
 }
+
+/*********************** 订单底部：配送信息相关 ***********************/
+
+.dilivery ul li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.dilivery ul li h5 {
+    /* display: inline-block; */
+    width: 70px;
+    font-size: 15px;
+}
+
+.dilivery ul li p {
+    font-size: 15px;
+}
+
+.dilivery ul li:nth-child(2) p {
+    /* 必须设置flex: 1，因为前边被"买家备注"用了，剩下的要给desc，否则布局有问题 */
+    flex: 1; 
+    margin-left: 10px;
+    color: #999;
+}
+
+.dilivery ul li:nth-child(3) p i {
+    /* margin-top: 10px; */
+    margin-left: 5px;
+}
+
+
