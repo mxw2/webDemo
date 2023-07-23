@@ -1,0 +1,6 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 这个属性太重要了，你如果不设置，他会把整个元素拉伸宽度设置很宽 */
+    box-sizing: border-box;
+}
