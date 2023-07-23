@@ -52,16 +52,21 @@ body {
 }
 
 .main {
-    padding: 10px;
+    padding: 10px 10px 90px;
     background-color: gray;
 }
-/*********************** 订单头部相关 ***********************/
+
+.main>div {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/*********************** 订单头部：用户信息相关 ***********************/
 .order-address {
     display: flex;
     align-items: center;
-    background-color: white;
-    padding: 10px 0 10px 10px;
-    border-radius: 5px;
 }
 
 /* 订单位置icon */
@@ -105,4 +110,71 @@ body {
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/*********************** 订单中部：商品信息相关 ***********************/
+
+.main .goods {
+    display: flex;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.main .goods img {
+    width: 85px;
+    height: 85px;
+    background-color: white;
+}
+
+.main .goods .goods-info {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.main .goods .goods-info h4 {
+    font-weight: 400;
+}
+
+.main .goods .goods-info p {
+    margin: 8px 0;
+    color: #666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main .goods .goods-info .goods-tags-bg-color {
+    display: inline-block;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 11px;
+    color: #888;
+    /* 不要设置他的宽度，因为内部文字可能会变化,采用行内块即可拉伸 */
+    background-color: #eee;
+    margin-bottom: 8px;
+}
+
+.main .goods .goods-info span {
+    color: #cf4444;
+    font-size: 11px;
+    margin-right: 12px;
+}
+
+.main .goods .goods-info span i {
+    color: #cf4444;
+    font-size: 16px;
+}
+
+.main .goods .goods-info del {
+    font-size: 11px;
+    color: #888;
+}
+
+.main .goods .count {
+    width: 44px;
+    padding-top: 20px;
+    text-align: center;
 }
