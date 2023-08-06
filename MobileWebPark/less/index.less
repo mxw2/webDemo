@@ -9,9 +9,32 @@ body {
 
 .toolbar {
     position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: cneter;
     background-color: #FECA49;
     left: 0;
     bottom: 0;
     width: 100%;
     height: (49 / @baseSize);
+    a {
+        padding-top: (4 / @baseSize);
+        color: #d78b09;
+        font-size: (11 / @baseSize);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+            font-size: (20 / @baseSize);
+            margin-bottom: (4 / @baseSize);
+        }
+
+        p {
+            font-size: (11 / @baseSize);
+        }
+    }
+
+    .select {
+        color: white;
+    }
 }
