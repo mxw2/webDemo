@@ -7,6 +7,87 @@ body {
     background-color: #f0f0f0;
 }
 
+.main {
+    padding-bottom: (64 / @baseSize);
+    // 轮播图
+    .banner {
+        height: (160 / @baseSize);
+    }
+
+    // 标题
+    .tableHeaderView {
+        // width: 100%;
+        height: (40 / @baseSize);
+        line-height: (40 / @baseSize);
+        font-size: (15 / @baseSize);
+        padding-left: (15 / @baseSize);
+        background-color: pink;
+    }
+
+    // cell
+    .cell {
+        // width: 100%;
+        margin-bottom: (10 / @baseSize);
+        .pic {
+            position: relative;
+            height: (160 / @baseSize);
+            .activeStatus {
+                position: absolute;
+                left: (15 / @baseSize);
+                top: (-4 / @baseSize);
+                width: (64 / @baseSize);
+                height: (28 / @baseSize);
+                line-height: (28 / @baseSize);
+                text-align: center;
+                color: white;
+                font-size: (10 / @baseSize);
+                background: url(../images/status_active.png);
+                // 因为图片太大了，通过这个属性控制保证全都能显示出来
+                background-size: contain;
+            }
+        }
+        .texts {
+            padding: (8 / @baseSize) (15 / @baseSize);
+            background-color: #fff;
+
+            .topText {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h5 {
+                    width: (290 / @baseSize);
+                    color: #3c3c3c;
+                    font-size: (15 / @baseSize);
+                    font-weight: 400;
+                }
+    
+                p {
+                    color: #FE6249;
+                    font-size: (15 / @baseSize);
+                }
+            }
+            
+            .bottomText {
+                display: flex; // 默认挨着横放
+                font-size: (11 / @baseSize);
+                color: blue;
+                margin-top: (15 / @baseSize);
+                p {
+                    margin-right: (15 / @baseSize);
+                    .iconfont {
+                        // 覆盖原有的size哈
+                        font-size: (11 / @baseSize);
+                        margin-right: (5 / @baseSize);
+                    }
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .toolbar {
     position: fixed;
     display: flex;
