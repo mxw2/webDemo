@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div>
+        <ul>
+            <li>列表</li>
+        </ul>
+        <p>段落</p>
+        <h1>标题</h1>
+        <span>span标签</span>
+        <p>段落2</p>
+        <input type="text">
+        <p>段落3</p>
+        <a href="#">连接</a>
+    </div>
+    <script>
+        // let div = document.querySelector("h1");
+        // console.log(div.parentNode);
+        // div.childNodes;
+        // console.log(div.previousElementSibling);
+        // console.log(div.nextElementSibling.nextElementSibling);
+        let body = document.body;
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "123";
+        body.appendChild(h1);
+    </script>
+ </body>
+ </html>
